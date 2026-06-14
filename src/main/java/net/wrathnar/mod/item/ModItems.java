@@ -30,7 +30,6 @@ public class ModItems {
 
 	public static final Item WRATHNAR_SWORD = registerItem("wrathnar_sword",
 			settings -> new SwordItem(WRATHNAR_MATERIAL, settings
-					.attributeModifiers(SwordItem.createAttributeModifiers(WRATHNAR_MATERIAL, 4, -2.4f))
 					.rarity(Rarity.EPIC)
 					.fireproof()
 			)

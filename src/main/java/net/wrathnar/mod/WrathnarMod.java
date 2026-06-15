@@ -3,8 +3,6 @@ package net.wrathnar.mod;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.util.ActionResult;
 import net.wrathnar.mod.item.ModItems;
 import org.slf4j.Logger;
@@ -17,16 +15,15 @@ public class WrathnarMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// Register the Wrathnar sword and any other mod items.
 		ModItems.registerModItems();
 
 		// Wrathnar's curse: hitting a living entity with the Wrathnar sword
-		// afflicts it with a short burst of the Wither effect.
+		// sets it on fire for 5 seconds.
 		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 			if (!world.isClient()
 					&& player.getStackInHand(hand).getItem() == ModItems.WRATHNAR_SWORD
 					&& entity instanceof LivingEntity living) {
-				living.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 100, 0));
+				living.setFireTicks(100);
 			}
 			return ActionResult.PASS;
 		});

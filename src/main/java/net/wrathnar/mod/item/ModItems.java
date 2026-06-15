@@ -23,7 +23,7 @@ public class ModItems {
 			BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
 			2500,
 			9.0f,
-			5.0f,
+			12.5f,
 			20,
 			ItemTags.NETHERITE_TOOL_MATERIALS
 	);

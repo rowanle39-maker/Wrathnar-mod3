@@ -18,5 +18,7 @@ public class WrathnarClientMod implements ClientModInitializer {
 				GLFW.GLFW_KEY_Z,
 				"category.wrathnar"
 		));
+
+		WrathnarFlyHandler.register();
 	}
 }

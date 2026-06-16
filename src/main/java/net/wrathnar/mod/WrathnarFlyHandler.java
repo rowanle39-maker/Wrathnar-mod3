@@ -23,7 +23,7 @@ public class WrathnarFlyHandler {
 
 			if (WrathnarClientMod.flyKey.wasPressed() && holdingWrathnar && !isFlying) {
 				isFlying = true;
-				flyTicks = 200; // 10 saniye = 200 tick
+				flyTicks = 200;
 				player.getAbilities().allowFlying = true;
 				player.getAbilities().flying = true;
 				player.sendAbilitiesUpdate();
@@ -36,8 +36,8 @@ public class WrathnarFlyHandler {
 					player.getAbilities().allowFlying = false;
 					player.getAbilities().flying = false;
 					player.sendAbilitiesUpdate();
-					// Hasar yememek için yere düşünce
-					player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 100, 0));
+					// Hasar yememek için geçici no fall damage
+					player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 60, 4));
 				}
 			}
 		});

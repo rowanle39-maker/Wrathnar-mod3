@@ -3,7 +3,7 @@
   "id": "wrathnar",
   "version": "${version}",
   "name": "Wrathnar Mod",
-  "description": "Adds Wrathnar, a legendary sword forged in wrath, complete with a withering strike.",
+  "description": "Adds Wrathnar, a legendary sword forged in wrath.",
   "authors": [
     "You"
   ],
@@ -13,13 +13,11 @@
   "entrypoints": {
     "main": [
       "net.wrathnar.mod.WrathnarMod"
+    ],
+    "client": [
+      "net.wrathnar.mod.WrathnarClientMod"
     ]
   },
   "mixins": [],
   "depends": {
-    "fabricloader": ">=0.16.10",
-    "fabric-api": "*",
-    "minecraft": "1.21.4",
-    "java": ">=21"
-  }
-}
+    "fabricloader": ">=0.16.1

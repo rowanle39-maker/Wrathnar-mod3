@@ -23,13 +23,13 @@ public class ModItems {
 			BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
 			2500,
 			9.0f,
-			12.5f,
+			7.0f,
 			20,
 			ItemTags.NETHERITE_TOOL_MATERIALS
 	);
 
 	public static final Item WRATHNAR_SWORD = registerItem("wrathnar_sword",
-			settings -> new SwordItem(WRATHNAR_MATERIAL, 4.0f, -2.4f, settings
+			settings -> new SwordItem(WRATHNAR_MATERIAL, 7.0f, -2.4f, settings
 					.rarity(Rarity.EPIC)
 					.fireproof()
 			)
